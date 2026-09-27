@@ -10,7 +10,7 @@
     </div>
 
     <div class="sidebar-stats">
-      <a href="/writeups/">
+      <a href="{{ "writeups/" | relURL }}">
         <div class="stat-num">{{ len (where .Site.RegularPages "Type" "in" (slice "posts" "writeups")) }}</div>
         <div class="stat-label">Posts</div>
       </a>

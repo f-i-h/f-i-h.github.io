@@ -59,12 +59,12 @@
         // Check if we are near the bottom (within 50px)
         if (scrollTop + clientHeight >= scrollHeight - 50) {
             if (!isAtBottom) {
-                scrollImg.src = "/images/screen_up.png";
+                scrollImg.src = "{{ "images/screen_up.png" | relURL }}";
                 isAtBottom = true;
             }
         } else {
             if (isAtBottom) {
-                scrollImg.src = "/images/screen_down.png";
+                scrollImg.src = "{{ "images/screen_down.png" | relURL }}";
                 isAtBottom = false;
             }
         }

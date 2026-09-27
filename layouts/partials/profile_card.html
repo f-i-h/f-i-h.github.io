@@ -1,9 +1,9 @@
 <div class="compact-profile-widget">
-  <img src="/images/profile.jpg" alt="fih" onerror="this.style.display='none'">
+  <img src="{{ "images/profile.jpg" | relURL }}" alt="fih" onerror="this.style.display='none'">
   <h3>fih</h3>
 
   <div class="sidebar-stats" style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border);">
-      <a href="/writeups/">
+      <a href="{{ "writeups/" | relURL }}">
         <div class="stat-num">{{ len (where .Site.RegularPages "Type" "in" (slice "posts" "writeups")) }}</div>
         <div class="stat-label">Posts</div>
       </a>

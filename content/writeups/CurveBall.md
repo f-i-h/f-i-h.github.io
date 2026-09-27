@@ -4,7 +4,7 @@ date: 2026-02-02
 tags: ["cryptography", "Elliptic Curves", "Pohlig Hellman", "ECDLP"]
 description: "Our casino's new cryptographic gambling system uses elliptic curves for provably fair betting.We're so confident in our implementation that we even give you an oracle to verify points!"
 showToc: true
-hover_image: "/images/ball_final.png"
+hover_image: "images/ball_final.png"
 math: true
 ---
 ## CurveBall
@@ -24,7 +24,7 @@ The **Curve Ball** challenge is an elliptic-curve cryptography (ECC) challenge t
 ### Challenge Setup
 In this challenge, we were given an instance which when we connected to the server, we got the below information: 
 
-![Challenge Setup](/images/pascal.png)
+![Challenge Setup](images/pascal.png)
 
 Here, they've given us: 
 - The elliptic curve equation
