@@ -45,7 +45,7 @@
           </div>
 
           {{ if .Params.hover_image }}
-          <img src="{{ .Params.hover_image }}" class="hover-pop-image" alt="Hover Preview Image" loading="lazy" decoding="async">
+          <img src="{{ .Params.hover_image | relURL }}" class="hover-pop-image" alt="Hover Preview Image" loading="lazy" decoding="async">
           {{ end }}
           
           <a class="entry-link-overlay" aria-label="Read more about {{ .Title }}" href="{{ .Permalink }}"></a>

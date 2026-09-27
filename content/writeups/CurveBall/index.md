@@ -24,7 +24,7 @@ The **Curve Ball** challenge is an elliptic-curve cryptography (ECC) challenge t
 ### Challenge Setup
 In this challenge, we were given an instance which when we connected to the server, we got the below information: 
 
-![Challenge Setup](images/pascal.png)
+![Challenge Setup](pascal.png)
 
 Here, they've given us: 
 - The elliptic curve equation

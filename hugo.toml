@@ -40,9 +40,9 @@ buildFuture = false
   images = ["images/profile.jpg"]
 
   [params.assets]
-    favicon = "images/fish.jpeg"
-    favicon16x16 = "images/fish.jpeg"
-    favicon32x32 = "images/fish.jpeg"
+    favicon = "images/fish.jpg"
+    favicon16x16 = "images/fish.jpg"
+    favicon32x32 = "images/fish.jpg"
 
 [taxonomies]
   tag = "tags"
