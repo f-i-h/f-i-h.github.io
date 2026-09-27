@@ -11,7 +11,7 @@ buildFuture = false
 [params]
   env = "production"
   author = "fih"
-  description = "halo"
+  description = "ORA ORA"
   defaultTheme = "dark"
   disableThemeToggle = false
   ShowReadingTime = false
