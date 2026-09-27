@@ -11,7 +11,7 @@ buildFuture = false
 [params]
   env = "production"
   author = "fih"
-  description = "cryptography ctf writeups & cipher breakdowns"
+  description = "halo"
   defaultTheme = "dark"
   disableThemeToggle = false
   ShowReadingTime = false
