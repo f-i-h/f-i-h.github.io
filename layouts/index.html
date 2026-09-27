@@ -1,0 +1,58 @@
+{{ define "main" }}
+<div class="redefine-layout">
+  
+  {{ partial "sidebar.html" . }}
+
+  <div class="main-content">
+    <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;">fih's blog - Cryptography CTF Writeups</h1>
+    {{ if .Content }}<div class="post-content" style="margin-bottom: 2rem;">{{ .Content }}</div>{{ end }}
+
+    <ul class="home-article-list">
+      {{ $pages := where .Site.RegularPages "Type" "in" (slice "posts" "writeups") }}
+      {{ $paginator := .Paginate $pages }}
+      
+      {{ range $index, $page := $paginator.Pages }}
+        <li class="home-article-item">
+          
+          <div class="article-info">
+            <h3 class="article-title">
+              <a href="{{ .Permalink }}">{{ .Title }}{{ if .Draft }} <sup>[draft]</sup>{{ end }}</a>
+            </h3>
+
+            {{ if (ne (.Param "hideSummary") true) }}
+            <div class="article-excerpt">
+              {{ with .Description }}
+                {{ . }}
+              {{ else }}
+                {{ .Summary | plainify | htmlUnescape | truncate 150 }}{{ if .Truncated }}...{{ end }}
+              {{ end }}
+            </div>
+            {{ end }}
+
+            <div class="article-meta">
+              <span class="meta-item">{{ .Date.Format "January 2, 2006" }}</span>
+              <span class="meta-separator">&nbsp;&bull;&nbsp;</span>
+              <span class="meta-item">{{ .WordCount }} words</span>
+              
+              {{ if .Params.tags }}
+              <div class="meta-tags" style="margin-top: 1rem; position: relative; z-index: 2;">
+                {{ range $tag := .Params.tags }}
+                  <span class="tag-pill">{{ $tag }}</span>
+                {{ end }}
+              </div>
+              {{ end }}
+            </div>
+          </div>
+
+          {{ if .Params.hover_image }}
+          <img src="{{ .Params.hover_image }}" class="hover-pop-image" alt="Hover Preview Image" loading="lazy" decoding="async">
+          {{ end }}
+          
+          <a class="entry-link-overlay" aria-label="Read more about {{ .Title }}" href="{{ .Permalink }}"></a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+
+</div>
+{{ end }}
