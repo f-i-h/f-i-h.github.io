@@ -24,7 +24,7 @@
 
 {{- if not site.Params.disableScrollToTop }}
 <a aria-label="scroll" class="top-link" id="top-link" style="visibility: visible; opacity: 1; padding: 0; background: transparent; transition: all 0.3s ease; width: auto; height: auto;">
-    <img id="scroll-img" src="/images/screen_down.png" alt="Scroll" style="width: 85px; height: auto; filter: drop-shadow(0 0 10px var(--accent));">
+    <img id="scroll-img" src="{{ "images/screen_down.png" | relURL }}" alt="Scroll" style="width: 85px; height: auto; filter: drop-shadow(0 0 10px var(--accent));">
 </a>
 {{- end }}
 
